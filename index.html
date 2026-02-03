@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.photos img {
+  width: 110px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+</style>
   <meta charset="UTF-8">
   <title>For Aditya 💖</title>
 
@@ -99,29 +116,35 @@
   </div>
 
   <script>
-    function sayYes() {
-      document.getElementById("card").innerHTML = `
-        <h1>My Valentine 💘</h1>
-        <p>
-          Aditya, you’re my favorite feeling, my safe place,  
-          and my forever choice 💕  
-          <br><br>
-          Happy Valentine’s Day ❤️
-        </p>
+function sayYes() {
+  document.getElementById("card").innerHTML = `
+    <h1>My Valentine 💘</h1>
 
-    
+    <p style="font-size:18px; line-height:1.6;">
+      Aditya,  
+      <br><br>
+      Loving you feels like coming home.  
+      You are my calm after chaos, my safest place,
+      and my favorite part of every day.  
+      <br><br>
+      With you, even ordinary moments feel special.
+      I choose you today, tomorrow, and always 💕  
+      <br><br>
+      Happy Valentine’s Day ❤️  
+      <br><br>
+      — meow 🐾
+    </p>
+
+    <div class="photos">
+      <img src="photo1.jpg" alt="Us">
+      <img src="photo2.jpg" alt="Us">
+      <img src="photo3.jpg" alt="Us">
+    </div>
+
     <div class="hearts">💖💖💖💖💖</div>
-      `;
-    }
-
-    function moveButton() {
-      const btn = document.getElementById("noBtn");
-      const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-      const y = Math.random() * (window.innerHeight - btn.offsetHeight);
-      btn.style.left = x + "px";
-      btn.style.top = y + "px";
-    }
-  </script>
+  `;
+}
+</script>
 
 </body>
 </html>
