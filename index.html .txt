@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Aditya 💖</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle, #ffdde1, #ee9ca7);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 45px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+      max-width: 420px;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: #ff3366;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: 300;
+      margin-bottom: 25px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    #yesBtn {
+      background: linear-gradient(135deg, #ff3366, #ff758c);
+      color: white;
+    }
+
+    #noBtn {
+      background: #ddd;
+      color: #333;
+      position: absolute;
+    }
+
+    .hearts {
+      position: absolute;
+      bottom: -40px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      animation: float 3s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-80px); opacity: 0; }
+    }
+
+    iframe {
+      margin-top: 20px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <h1>Aditya 💖</h1>
+    <h2>Will you be my Valentine?</h2>
+
+    <button id="yesBtn" onclick="sayYes()">Yes, always ❤️</button>
+    <button id="noBtn" onmouseover="moveButton()">No 🙈</button>
+
+    <div class="hearts">💗 💕 💖 💘 💝</div>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("card").innerHTML = `
+        <h1>My Valentine 💘</h1>
+        <p>
+          Aditya, you’re my favorite feeling, my safe place,  
+          and my forever choice 💕  
+          <br><br>
+          Happy Valentine’s Day ❤️
+        </p>
+
+        <iframe width="300" height="170"
+          src="https://www.youtube.com/embed/7tPjQpZ5GkA?autoplay=1"
+          title="Boyfriend - Karan Aujla"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+
+        <div class="hearts">💖💖💖💖💖</div>
+      `;
+    }
+
+    function moveButton() {
+      const btn = document.getElementById("noBtn");
+      const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
